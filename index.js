@@ -1,0 +1,26 @@
+var produtoCadastrado = require('./produtos')
+var cadastrarUsuario = require('./usuarios')
+
+const produtoAdiciona = new produtoCadastrado()
+const adicionaUsuario = new cadastrarUsuario()
+
+produtoAdiciona.cadastraProduto('Galak',5.99,5)
+produtoAdiciona.cadastraProduto('Diamante Negro',5.99,10)
+produtoAdiciona.cadastraProduto('Hersheys',3.99,5)
+produtoAdiciona.cadastraProduto('Suflair',2.99,10)
+produtoAdiciona.cadastraProduto('Sonho de Valsa',0.99,2)
+produtoAdiciona.cadastraProduto('Lacta',5.99,0)
+produtoAdiciona.cadastraProduto('Shot',4.99,0)
+produtoAdiciona.cadastraProduto('Bis',4.50,0)
+produtoAdiciona.cadastraProduto('Star',4.99,20)
+produtoAdiciona.cadastraProduto('Ancor',3.99,0)
+
+console.log('Produtos em estoque:')
+console.log(produtoAdiciona.listaEstoque())
+console.log('Produtos com estoque vazio:')
+console.log(produtoAdiciona.estoqueVazio())
+
+adicionaUsuario.cadastroUser('Ana Paula','ana@gmail.com',800)
+adicionaUsuario.cadastroUser('Pedro','pedrinho@gmail.com',100)
+console.log('Usuários Cadastrados:')
+console.log(adicionaUsuario.listaUser)
